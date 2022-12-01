@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.szkingdom.rfkj.oauth.dao.UserInfoDao">
+    <resultMap id="UserInfoMap" type="com.szkingdom.rfkj.oauth.model.UserInfo">
+            <id column="id" property="id" jdbcType="CHAR"/>
+            <result column="password" property="password" jdbcType="CHAR"/>
+            <result column="user_name" property="userName" jdbcType="CHAR"/>
+    </resultMap>
+
+    <sql id="all_column_list">
+        id , password , user_name
+    </sql>
+
+        <select id="selectById" resultMap="UserInfoMap">
+            SELECT
+            <include refid="all_column_list"/>
+            FROM user_info
+            WHERE field.fieldCode = #{id, jdbcType=CHAR}
+        </select>
+
+    <select id="selectByUserName" resultMap="UserInfoMap">
+        SELECT
+        <include refid="all_column_list"/>
+        FROM user_info
+        WHERE user_name = #{userName, jdbcType=CHAR}
+    </select>
+
+        <delete id="deleteById">
+            DELETE FROM
+            user_info
+            WHERE field.fieldCode = #{id, jdbcType=CHAR}
+        </delete>
+
+    <insert id="insert" parameterType="com.szkingdom.rfkj.oauth.model.UserInfo">
+        INSERT INTO user_info
+        (
+        <include refid="all_column_list"/>
+        )
+        VALUES
+        (
+            #{id, jdbcType=CHAR},
+            #{password, jdbcType=CHAR},
+            #{userName, jdbcType=CHAR}
+        )
+    </insert>
+
+    <update id="update" parameterType="com.szkingdom.rfkj.oauth.model.UserInfo">
+        UPDATE
+        user_info
+        SET
+            id = #{id, jdbcType=CHAR},
+            password = #{password, jdbcType=CHAR},
+            user_name = #{userName, jdbcType=CHAR}
+        WHERE
+            id = #{id, jdbcType=CHAR}
+            
+    </update>
+</mapper>

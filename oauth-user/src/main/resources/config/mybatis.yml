@@ -1,0 +1,3 @@
+#mybatis:
+#  ##xml文件的路径配置
+#  mapper-locations: classpath:mybatis/*.xml
