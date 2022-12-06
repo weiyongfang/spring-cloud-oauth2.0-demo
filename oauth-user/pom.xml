@@ -48,6 +48,12 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <!-- redis 使用-->
+        <!-- tsetNG单元测试 -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.10</version>
+        </dependency>
 
     </dependencies>
     <!--SpringCloud依赖-->

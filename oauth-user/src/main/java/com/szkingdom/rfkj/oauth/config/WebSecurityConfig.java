@@ -40,7 +40,7 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Bean
     public AuthorizationCodeServices authorizationCodeServices(){
-        return new InMemoryAuthorizationCodeServices(); // 内存模式-获取授权码
+            return new InMemoryAuthorizationCodeServices(); // 内存模式-获取授权码
     }
 
     /***
