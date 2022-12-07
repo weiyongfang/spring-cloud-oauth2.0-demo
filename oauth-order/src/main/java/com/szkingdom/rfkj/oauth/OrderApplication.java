@@ -10,7 +10,6 @@ import org.springframework.boot.context.ApplicationPidFileWriter;
 import org.springframework.boot.web.context.WebServerPortFileWriter;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 import org.springframework.web.client.RestTemplate;
 import tk.mybatis.spring.annotation.MapperScan;
@@ -28,11 +27,11 @@ import java.util.Optional;
 @EnableEurekaClient
 @MapperScan(basePackages = "com.szkingdom.rfkj.oauth.dao")
 //@EnableFeignClients(basePackages = "com.changgou.user.feign")
-public class OAuthApplication {
-    private static final Logger log = LoggerFactory.getLogger(OAuthApplication.class);
+public class OrderApplication {
+    private static final Logger log = LoggerFactory.getLogger(OrderApplication.class);
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(OAuthApplication.class);
+        SpringApplication app = new SpringApplication(OrderApplication.class);
         app.addListeners(new ApplicationPidFileWriter(), new WebServerPortFileWriter());
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

@@ -6,6 +6,7 @@
     <modules>
         <module>oauth-eureka-service</module>
         <module>oauth-user</module>
+        <module>oauth-order</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

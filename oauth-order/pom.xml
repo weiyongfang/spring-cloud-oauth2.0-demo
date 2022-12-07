@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <description>Oauth2.0权限认证</description>
-    <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>oauth-demo-parent</artifactId>
         <groupId>oauth-demo</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>oauth-user</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>oauth-order</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,10 +23,10 @@
             <artifactId>spring-cloud-starter-oauth2</artifactId>
         </dependency>
         <!--SpringSecurity 登录认证依赖-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-security</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-security</artifactId>-->
+<!--        </dependency>-->
         <!--test组件-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -73,5 +73,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>

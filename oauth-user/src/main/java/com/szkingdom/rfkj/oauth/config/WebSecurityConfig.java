@@ -65,7 +65,7 @@ class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin().permitAll()       //启用表单身份验证
                 .and()
                 .authorizeRequests()    //限制基于Request请求访问
-                .antMatchers("/oauth/**").permitAll()//oauth接口全部允许访问
+                .antMatchers("/oauth/**","/user/**").permitAll()//oauth接口全部允许访问
                 .anyRequest().authenticated();       //其他请求都需要经过验证
     }
 }

@@ -19,7 +19,4 @@ import com.szkingdom.rfkj.oauth.util.AuthToken;
 * @version V0.4 2022-11-30
 */
 public interface UserInfoService {
-   UserInfo loadUserByUsernameAndPassword(String userName);
-
-    AuthToken login(String username, String password, String clientId, String clientSecret);
 }
