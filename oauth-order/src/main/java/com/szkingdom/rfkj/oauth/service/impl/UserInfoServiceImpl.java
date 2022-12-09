@@ -7,28 +7,8 @@
 
 package com.szkingdom.rfkj.oauth.service.impl;
 
-import com.szkingdom.rfkj.oauth.dao.UserInfoDao;
-import com.szkingdom.rfkj.oauth.model.UserInfo;
 import com.szkingdom.rfkj.oauth.service.UserInfoService;
-import com.szkingdom.rfkj.oauth.util.AuthToken;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Service;
-import org.springframework.util.Base64Utils;
-import org.springframework.util.LinkedMultiValueMap;
-import org.springframework.util.MultiValueMap;
-import org.springframework.web.client.DefaultResponseErrorHandler;
-import org.springframework.web.client.RestClientException;
-import org.springframework.web.client.RestTemplate;
-
-
-import java.io.IOException;
-import java.util.Map;
 
 /**
  * 对应表：user_info service接口实现类.
